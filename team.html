@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Team</title>
+  <link rel="shortcut icon" href="./Images/favicon-32x32.png">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2da03c4b01.js" crossorigin="anonymous"></script>
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    .ab-us {
+        background-color: #ffffff !important;
+        padding-bottom: 10px;
+    }
+    .row {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 2em 8em;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .column {
+        width: 100%;
+        padding: 1em 0;
+        flex: 0 0 33.33%;
+        padding: 0 1em;
+    }
+    
+    .card {
+        box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+        padding: 3.5em 1em;
+        border-radius: 0.6em;
+        color: #1f003b;
+        cursor: pointer;
+        transition: 0.3s;
+        background-color: #ffffff;
+    }
+
+    .card .img-container {
+        /* width: 8em; */
+        /* height: 8em; */
+        /* background-color: #a993ff; */
+        /* padding: 0.5em; */
+        /* border-radius: 50%; */
+        margin: 0 auto 2em auto;
+    }
+
+    .card img {
+        /* width: 100%; */
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .card h3 {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .card p {
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0.5em 0 2em 0;
+        letter-spacing: 2px;
+    }
+
+    .icons {
+        width: 50%;
+        min-width: 180px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.4em;
+    }
+
+    .card:hover {
+        /* background: linear-gradient(#6045ea, #8567f7); */
+        background-color: #1f2937;
+        color: #ffffff;
+    }
+
+    .card:hover .img-container {
+        transform: scale(1.15);
+    }
+
+    .grid-img {
+        grid-column: 1/6;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background-color: white;
+        padding: 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 80%;
+        overflow: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .modal-content {
+        position: relative;
+        display: flex;
+        flex-direction: row !important;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 0.3rem;
+        outline: 0;
+    }
+
+    .modal-content .img-container {
+        /* Adjust the width of the image container as needed */
+        width: 30%;
+        /* padding: 20px; */
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .modal-content .img-container img {
+        /* max-width: 50%;
+        /* Set a maximum width */
+        /* height: auto; */
+        /* Maintain aspect ratio */
+        max-width: 100%;
+        /* height: auto; */
+        height: auto;
+        /* border: 1px solid black; */
+        border-radius: 4px;
+    }
+
+    .modal-details {
+        width: 70%;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .modalRole {
+        font-weight: 500;
+    }
+
+    /*@media screen and (max-width: 768px) {
+      .row {
+        padding: 2em 4em;
+      }
+
+      .column {
+        flex: 0 0 50%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .row {
+          flex-wrap: wrap;
+          padding: 2em 1em;
+          margin: 0 1em;
+      }
+
+      .column {
+          flex: 0 0 100%;
+          margin-bottom: 1em;
+      }
+    }*/
+
+    /* Media Query for Tablets */
+    @media screen and (max-width: 768px) {
+        .row {
+            padding: 2em 4em;
+        }
+
+        .column {
+            flex: 0 0 50%;
+        }
+
+        .modal-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modal-content .img-container {
+            width: 70%;
+        }
+
+        .modal-content .img-container img {
+            max-width: 80%;
+        }
+
+        .modal-details {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+    }
+
+    /* Media Query for Mobiles */
+    @media screen and (max-width: 600px) {
+        .row {
+            flex-wrap: wrap;
+            padding: 2em 1em;
+            margin: 0 1em;
+        }
+
+        .column {
+            flex: 0 0 100%;
+            margin-bottom: 1em;
+        }
+
+        .modal-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modal-content .img-container {
+            width: 80%;
+        }
+
+        .modal-content .img-container img {
+            max-width: 100%;
+        }
+
+        .modal-details {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+    }
+
+  </style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section-->
+    <header class="header">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="https://vit.ac.in/">
+            <img src="images/vitllogo.png" style="height: 3.5rem;">
+          </a>
+          <a class="navbar-brand" href="index.html" style="margin-right: auto;"> 
+            <img src="images/VARC.png" style="height: 3.5rem;">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center" >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> <b>About</b> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="team.html"> <b>Our Team</b> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="events.html"> <b>Events and Workshops</b> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="main.html#contactus"> <b>Contact us</b> </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- work section -->
+  <section class="work_section layout_padding" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Our Team</h2>
+      </div>
+    </div>
+    </section>
+    <div id="ourteam" class="ab-us" style="margin-bottom: 20px;">
+        <section>
+          <div class="row">
+              <h1>Board 2023-24</h1>
+          </div>
+          <div class="row">
+              <!-- Column 1-->
+              <div class="column"
+                  onclick="openModal('Gautham Sai S.A.', 'Chairperson', './Images/Team/gautam.png', 'Meet Gautham aka \'G-Man\', a guy with an insatiable thirst for knowledge and a diverse range of interests')">
+                  <div class="card">
+                      <div class="img-container">
+                          <img src="./Images/Team/gautam.png" alt="Gautham's profile image">
+                      </div>
+                      <h3>Gautham Sai S.A.</h3>
+                      <p>Chairperson</p>
+                      <div class="icons">
+
+                          <a href="https://www.linkedin.com/in/gautham-sai-7953151ba/">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:gauthamsai.sa2020@vitstudent.ac.in">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Column 2-->
+              <div class="column"
+                  onclick="openModal('Sanjeeva Reddy (VU3BXJ)', 'Vice-Chairperson', './Images/Team/san.png', 'Sanjeev, our resident ray of sunshine keeps the club running like clockwork. He manages the club with unparalleled finesse and dedication.')">
+                  <div class="card">
+                      <div class="img-container">
+                          <img src="./Images/Team/san.png" alt="Sanjeev's profile image">
+                      </div>
+                      <h3>Sanjeeva Reddy</h3>
+                      <p>Vice-Chairperson</p>
+                      <div class="icons">
+
+                          <a href="https://www.linkedin.com/in/sanjeeva-reddy-s-0a381624b">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:sanjeevareddy.s2021@vitstudent.ac.in">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Column 3-->
+              <div class="column"
+                  onclick="openModal('Sahaj Dargan', 'Secretary', './Images/Team/sahaj.png', 'Practical, Reserved and Ambitious, presenting Sahaj, the Secretary for VARC 2023-24')">
+                  <div class="card">
+                      <div class="img-container">
+                          <img src="./Images/Team/sahaj.png" alt="Sahaj's profile image">
+                      </div>
+                      <h3>Sahaj Dargan</h3>
+                      <p>Secretary</p>
+                      <div class="icons">
+
+                          <a href="https://www.linkedin.com/in/sahaj-dargan-4331a0209/">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:sahaj.dargan2020@vitstudent.ac.in">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <!-- Column 1-->
+              <div class="column"
+                  onclick="openModal('Manan Mathur (VU3BWY)', 'Vice - Secretary', './Images/Team/manan.png', 'Manan has an unwavering dedication towards the club, and he works tirelessly behind the scenes to ensure that everything runs smoothly.')">
+                  <div class="card">
+                      <div class="img-container">
+                          <img src="./Images/Team/manan.png" alt="Manan's profile image">
+                      </div>
+                      <h3>Manan Mathur</h3>
+                      <p>Vice-Secretary</p>
+                      <div class="icons">
+
+                          <a href="https://www.linkedin.com/in/mathurmanan/">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:manan.mathur2021@vitstudent.ac.in">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Column 2-->
+              <div class="column"
+                  onclick="openModal('Mathew John', 'R&D Head', './Images/Team/mathew.png', 'Mathew is a chap with strong convictions and peculiar interests. He loves to delve into the intricate workings of various equipment and has a work ethic paralleled only by Wile E. Coyote (minus the explosions!)')">
+                  <div class="card">
+                      <div class="img-container">
+                          <img src="./Images/Team/mathew.png" alt="Mathew's profile image">
+                      </div>
+                      <h3>Mathew John</h3>
+                      <p>R&D Head</p>
+                      <div class="icons">
+
+                          <a href="https://www.linkedin.com/in/mathewjohn01">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:mathew.john2021@vitstudent.ac.in">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Column 3-->
+              <div class="column"
+                  onclick="openModal('Anand Shankar', 'Projects Head', './Images/Team/anand.png', 'Meet Anand, an adept user of SolidWorks with an insatiable appetite to learn. He believes that all people need is a little push and a little help to get their ideas up and running and can’t wait to work with anyone who excites his creative side.')">
+                  <div class="card">
+                      <div class="img-container">
+                          <img src="./Images/Team/anand.png" alt="Anand's profile image">
+                      </div>
+                      <h3>Anand Shankar</h3>
+                      <p>Projects Head</p>
+                      <div class="icons">
+
+                          <a href="https://www.linkedin.com/in/anand-shankar-a14171237/">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:anandshankar.m2021@vitstudent.ac.in">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <!-- Column 1-->
+              <div class="column"
+                  onclick="openModal('Saheli Sahoo', 'Technical Head', './Images/Team/saheli.png', 'Saheli, holding true to her name, is indeed a friend to all. She is a proficient website creator and handler.')">
+                  <div class="card">
+                      <div class="img-container">
+                          <img src="./Images/Team/saheli.png" alt="Saheli's profile image">
+                      </div>
+                      <h3>Saheli Sahoo</h3>
+                      <p>Technical Head</p>
+                      <div class="icons">
+
+                          <a href="https://www.linkedin.com/in/saheli-sahoo-8772b2220/">
+                              <i class="fab fa-linkedin"></i>
+                          </a>
+                          <a href="mailto:saheli.sahoo2021@vitstudent.ac.in">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Column 2-->
+              <div class="column"
+                  onclick="openModal('Yashwanta Purohit', 'Finance Head', './Images/Team/Yashwanta.png', 'Meet Yashwanta, a master of innovative problem-solving, he effortlessly weaves inventive solutions into his daily routine as the finance head of the club.')">
+                  <div class="card">
+                      <div class="img-container">
+                          <img src="./Images/Team/Yashwanta.png" alt="Yashwanta's profile image">
+                      </div>
+                      <h3>Yashwanta Purohit</h3>
+                      <p>Finance Head</p>
+                      <div class="icons">
+
+                          <a href="https://instagram.com/yashwanta_1708">
+                              <i class="fab fa-instagram"></i>
+                          </a>
+                          <a href="mailto:yashwanta.purohit2021@vitstudent.ac.in">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Column 3-->
+              <div class="column"
+                  onclick="openModal('Nixon Paul', 'HR Head', './Images/Team/nixon.png', ' Nixon is our silent-ninja extraordinaire, with a penchant for the latest gadgets and gizmos.')">
+                  <div class="card">
+                      <div class="img-container">
+                          <img src="./Images/Team/nixon.png" alt="Nixon's profile image">
+                      </div>
+                      <h3>Nixon Paul</h3>
+                      <p>HR Head</p>
+                      <div class="icons">
+
+                          <a href="https://instagram.com/_nixonpaul_">
+                              <i class="fab fa-instagram"></i>
+                          </a>
+                          <a href="mailto:nixon.paul2021@vitstudent.ac.in">
+                              <i class="fas fa-envelope"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content">
+          <div class="img-container">
+              <img id="modalImg" src="" alt="Member Image">
+          </div>
+          <div class="modal-details">
+              <h3 id="modalName">Member Name</h3>
+              <p id="modalRole">Role</p>
+              <p id="modalDescription">Member Description</p>
+          </div>
+      </div>
+  </div>
+  <script type="text/javascript">
+    function openModal(name, role, imgSrc, description) {
+    document.getElementById("modalName").textContent = name;
+    document.getElementById("modalRole").textContent = role;
+    document.getElementById("modalImg").src = imgSrc;
+    document.getElementById("modalDescription").textContent = description;
+    document.getElementById("myModal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  </script>
+
+  <!-- end work section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row" style="padding-left: 0px; padding-right: 0px; text-align: left;">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+              Student Welfare Office, VIT Vellore
+            </h5>
+            <div>
+              <div class="img-box">
+                <img src="images/location-white.png" width="18px" alt="">
+              </div>
+              <p>
+                Main Building 102,
+VIT University, Vellore
+Tamil Nadu-632014
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/telephone-white.png" width="12px" alt="">
+              </div>
+              <p>
+                0416-2202202 / 2200
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/envelope-white.png" width="18px" alt="">
+              </div>
+              <p>
+                director.sw@vit.ac.in
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/envelope-white.png" width="18px" alt="">
+              </div>
+              <p>
+                events.sw@vit.ac.in
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Information
+            </h5>
+            <p>
+              Any Announcements
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <img src="images/VARC.png" alt="VARC" style="width:220px;height:120px;">
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_form ">
+            <div class="social_box">
+              <a href="https://facebook.com/varc.vit">
+                <img src="images/fb.png" alt="">
+              </a>
+              <a href="https://twitter.com/varc_vit">
+                <img src="images/twitter.png" alt="">
+              </a>
+              <a href="https://in.linkedin.com/company/varc-vit">
+                <img src="images/linkedin.png" alt="">
+              </a>
+              <a href="https://www.instagram.com/varc_vit">
+                <img src="images/ins.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+  
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2023
+      <a href="https://vitarc.github.io/">VIT Amateur Radio Club</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript">
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector(".container-fluid");
+      var bar = document.querySelectorAll(".custom_nav-container.navbar-expand-lg .navbar-nav .nav-link")
+      header.classList.toggle("sticky", window.scrollY > 0);
+      if (window.scrollY >0){
+        bar.forEach(function(element) {
+          element.style.color = "#ecb7b7";
+        });
+      }
+      else {
+        bar.forEach(function(element) {
+          element.style.color = "#007BFF";
+        });
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>About Us</title>
+  <link rel="shortcut icon" href="./Images/favicon-32x32.png">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <!-- header section-->
+  <div class="hero_area">
+    <header class="header">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="https://vit.ac.in/">
+            <img src="images/vitllogo.png" style="height: 3.5rem;">
+          </a>
+          <a class="navbar-brand" href="index.html" style="margin-right: auto;"> 
+            <img src="images/VARC.png" style="height: 3.5rem;">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center" >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> <b>About</b> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="team.html"> <b>Our Team</b> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="events.html"> <b>Events and Workshops</b> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../main.html#contactus"> <b>Contact us</b> </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <!-- end header section -->
+
+  <!-- who section -->
+  <section class="who_section layout_padding" style="padding-top: 75px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-box">
+            <img src="images/About/AU_6.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                COLOPHON
+              </h2>
+            </div>
+            <p>
+              VARC is the official HAM radio club of Vellore Institute of Technology, operating as a technical club under the guidance of <b>Office of Students’ Welfare, VIT Vellore</b>.
+            </p>
+            <p style="margin-top: 0px;">
+              In the midst of the pandemic pandemonium in 2020, <a href="https://in.linkedin.com/in/anirudh-karnik-5a69171a5">Anirudh</a> (VU2EHF) and <a href="https://in.linkedin.com/in/sakshambhutani2001">Saksham</a> (VU3DTU), two kindred spirits were brainstorming, and suddenly, a thought zapped through their minds like a lightning strike – "Hey, does VIT have a HAM club?" The answer was a shocking silence! But, these two radio renegades 
+              <span id="dots">...</span>
+              <span id="more">
+                decided to change the game. And so, VARC was born, with a mission to light up the campus with radio chatter and signal symphonies. Guided by Dr. Harish Kittur, then the Dean of the School of Electronics Engineering, they set their sights on a noble mission – to bring the magic of amateur radio to the forefront of VIT's vibrant tapestry. Fast forward to the present, and VARC (VIT Amateur Radio Club, in case you were still wondering!) is no longer just a seedling of imagination – it's a full-fledged radio extravaganza. From its humble beginnings, the club has blossomed into a vibrant community. Imagine workshops where you dive headfirst into the fascinating world of radio telephony, guided by seasoned radio wizards. Picture hands-on sessions where you get to tinker, tweak, and tamper with gadgets that communicate across the airwaves like secret agents sending coded messages. We invite guest speakers who expatiate tales of radio derring-do and share wisdom that'll make your radio antennae quiver with anticipation (Pun intended!) Our club isn't just about tuning into the universe's radio frequencies; we're also about fostering a sense of camaraderie that's stronger than the bond between peanut butter and jelly. VARC is a place where the airwaves are alive with laughter, discovery, and the occasional static-filled joke. So, whether you're a seasoned radio pro or just someone who loves the idea of chatting through the ether, we welcome you with open arms (and antennas).
+              </span>
+            </p>
+            <button onclick="more()" id="myBtn">Read More</button> 
+            
+            <script type="text/javascript">
+              var moreText = document.getElementById("more");
+              moreText.style.display = "none";
+              function more() {
+                var dots = document.getElementById("dots");
+                var btnText = document.getElementById("myBtn");
+              
+                if (dots.style.display === "none") {
+                  dots.style.display = "inline";
+                  btnText.innerHTML = "Read more";
+                  moreText.style.display = "none";
+                } 
+                else {
+                  dots.style.display = "none";
+                  btnText.innerHTML = "Read less";
+                  moreText.style.display = "inline";
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end who section -->
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+              Student Welfare Office, VIT Vellore
+            </h5>
+            <div>
+              <div class="img-box">
+                <img src="images/location-white.png" width="18px" alt="">
+              </div>
+              <p>
+                Main Building 102,
+VIT University, Vellore
+Tamil Nadu-632014
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/telephone-white.png" width="12px" alt="">
+              </div>
+              <p>
+                0416-2202202 / 2200
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/envelope-white.png" width="18px" alt="">
+              </div>
+              <p>
+                director.sw@vit.ac.in
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="images/envelope-white.png" width="18px" alt="">
+              </div>
+              <p>
+                events.sw@vit.ac.in
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Information
+            </h5>
+            <p>
+              Any Announcements
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <img src="images/VARC.png" alt="VARC" style="width:220px;height:120px;">
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_form ">
+            <div class="social_box">
+              <a href="https://facebook.com/varc.vit">
+                <img src="images/fb.png" alt="">
+              </a>
+              <a href="https://twitter.com/varc_vit">
+                <img src="images/twitter.png" alt="">
+              </a>
+              <a href="https://in.linkedin.com/company/varc-vit">
+                <img src="images/linkedin.png" alt="">
+              </a>
+              <a href="https://www.instagram.com/varc_vit">
+                <img src="images/ins.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2023
+      <a href="https://vitarc.github.io/">VIT Amateur Radio Club</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript">
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector(".container-fluid");
+      var bar = document.querySelectorAll(".custom_nav-container.navbar-expand-lg .navbar-nav .nav-link")
+      header.classList.toggle("sticky", window.scrollY > 0);
+      if (window.scrollY >0){
+        bar.forEach(function(element) {
+          element.style.color = "#ecb7b7";
+        });
+      }
+      else {
+        bar.forEach(function(element) {
+          element.style.color = "#007BFF";
+        });
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  
+</body>
+</html>
