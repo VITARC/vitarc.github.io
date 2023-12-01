@@ -121,6 +121,7 @@
         background-color: rgba(0, 0, 0, 0.7);
         justify-content: center;
         align-items: center;
+        z-index: 9999;
     }
 
     .modal-content {
@@ -132,19 +133,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
-
-    .modal-content {
-        position: relative;
-        display: flex;
-        flex-direction: row !important;
-        width: 100%;
-        pointer-events: auto;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid rgba(0, 0, 0, .2);
-        border-radius: 0.3rem;
-        outline: 0;
     }
 
     .modal-content .img-container {
@@ -173,6 +161,7 @@
         box-sizing: border-box;
         font-size: 18px;
         line-height: 1.5;
+        padding-right: 0px
     }
 
     .modal-close {
@@ -186,62 +175,8 @@
         font-weight: 500;
     }
 
-    /*@media screen and (max-width: 768px) {
-      .row {
-        padding: 2em 4em;
-      }
-
-      .column {
-        flex: 0 0 50%;
-      }
-    }
-
-    @media screen and (max-width: 600px) {
-      .row {
-          flex-wrap: wrap;
-          padding: 2em 1em;
-          margin: 0 1em;
-      }
-
-      .column {
-          flex: 0 0 100%;
-          margin-bottom: 1em;
-      }
-    }*/
-
-    /* Media Query for Tablets */
-    @media screen and (max-width: 768px) {
-        .row {
-            padding: 2em 4em;
-        }
-
-        .column {
-            flex: 0 0 50%;
-        }
-
-        .modal-content {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .modal-content .img-container {
-            width: 70%;
-        }
-
-        .modal-content .img-container img {
-            max-width: 80%;
-        }
-
-        .modal-details {
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-    }
-
     /* Media Query for Mobiles */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 660px) {
         .row {
             flex-wrap: wrap;
             padding: 2em 1em;
@@ -256,6 +191,11 @@
         .modal-content {
             flex-direction: column;
             align-items: center;
+            padding-right: 10px;
+            padding-left: 10px;
+            max-height: 600px;
+            padding-bottom: 24px;
+
         }
 
         .modal-content .img-container {
@@ -263,7 +203,7 @@
         }
 
         .modal-content .img-container img {
-            max-width: 100%;
+            max-width: 60%;
         }
 
         .modal-details {
@@ -271,6 +211,9 @@
             padding: 20px;
             box-sizing: border-box;
             font-size: 14px;
+            padding-bottom: 0px;
+            text-align: center;
+
         }
     }
 
@@ -283,7 +226,7 @@
     <header class="header">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="https://vit.ac.in/">
+          <a class="navbar-brand" href="https://vit.ac.in/" target="_blank">
             <img src="images/vitllogo.png" style="height: 3.5rem;">
           </a>
           <a class="navbar-brand" href="index.html" style="margin-right: auto;"> 
@@ -327,10 +270,15 @@
   </section>
   <div id="ourteam" class="ab-us" style="margin-bottom: 20px;">
         <section>
-        <div class="row">
-            <!-- Column 1-->
-            <div class="column"
-                onclick="openModal('Dr. Kittur Harish Mallikarjun', 'Faculty Coordinator', 'images/Team/kittur.jpg', 'Dr. Kittur, our esteemed Faculty Coordinator, brings a wealth of academic excellence and experience to our club. He is currently a professor of Higher Academic Grade at VIT Vellore. He has a strong educational background, with an M.Tech degree in solid-state technology from IIT Madras, complemented by a Ph.D. in Physics from RWTH Aachen University. He was previously the Dean at the School of Electronics Engineering, in which position, he helped establish the club. His guidance help catalyze our club’s endeavors, inspiring us to strive for excellence and foster innovation.')">
+
+      </section>
+  </div>
+  <div id="ourteam" class="ab-us" style="margin-bottom: 20px;">
+        <section>
+          <div class="row">
+              <!-- Column 1-->
+              <div class="column"
+                onclick="openModal('Dr. Kittur Harish Mallikarjun', 'Faculty Coordinator', 'images/Team/kittur.jpg', 'Dr. Kittur is the Faculty Coordinator of VIT Amateur Radio Club. He is currently a professor of Higher Academic Grade at VIT, Vellore. He has a strong educational background, with an M.Tech degree in solid-state technology from IIT Madras, complemented by a Ph.D. in Physics from RWTH Aachen University. He was previously the Dean at the School of Electronics Engineering, in which position, he helped establish the club. His guidance help catalyze our club’s endeavors, inspiring us to strive for excellence and foster innovation.')">
                 <div class="card">
                     <div class="img-container">
                         <img src="images/Team/kittur.jpg" alt="Dr Kittur profile image">
@@ -344,11 +292,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-      </section>
-  </div>
-  <div id="ourteam" class="ab-us" style="margin-bottom: 20px;">
-        <section>
+          </div>
           <div class="row">
               <h2>Board 2023-24</h2>
           </div>
@@ -364,7 +308,7 @@
                       <p>Chairperson</p>
                       <div class="icons">
 
-                          <a href="https://www.linkedin.com/in/gautham-sai-7953151ba/">
+                          <a href="https://www.linkedin.com/in/gautham-sai-7953151ba/" target="_blank">
                               <i class="fab fa-linkedin"></i>
                           </a>
                           <a href="mailto:gauthamsai.sa2020@vitstudent.ac.in">
@@ -384,7 +328,7 @@
                       <p>Vice-Chairperson</p>
                       <div class="icons">
 
-                          <a href="https://www.linkedin.com/in/sanjeeva-reddy-s-0a381624b">
+                          <a href="https://www.linkedin.com/in/sanjeeva-reddy-s-0a381624b" target="_blank">
                               <i class="fab fa-linkedin"></i>
                           </a>
                           <a href="mailto:sanjeevareddy.s2021@vitstudent.ac.in">
@@ -404,7 +348,7 @@
                       <p>Secretary</p>
                       <div class="icons">
 
-                          <a href="https://www.linkedin.com/in/sahaj-dargan-4331a0209/">
+                          <a href="https://www.linkedin.com/in/sahaj-dargan-4331a0209/" target="_blank">
                               <i class="fab fa-linkedin"></i>
                           </a>
                           <a href="mailto:sahaj.dargan2020@vitstudent.ac.in">
@@ -426,7 +370,7 @@
                       <p>Vice-Secretary</p>
                       <div class="icons">
 
-                          <a href="https://www.linkedin.com/in/mathurmanan/">
+                          <a href="https://www.linkedin.com/in/mathurmanan/" target="_blank">
                               <i class="fab fa-linkedin"></i>
                           </a>
                           <a href="mailto:manan.mathur2021@vitstudent.ac.in">
@@ -446,7 +390,7 @@
                       <p>R&D Head</p>
                       <div class="icons">
 
-                          <a href="https://www.linkedin.com/in/mathewjohn01">
+                          <a href="https://www.linkedin.com/in/mathewjohn01" target="_blank">
                               <i class="fab fa-linkedin"></i>
                           </a>
                           <a href="mailto:mathew.john2021@vitstudent.ac.in">
@@ -466,7 +410,7 @@
                       <p>Projects Head</p>
                       <div class="icons">
 
-                          <a href="https://www.linkedin.com/in/anand-shankar-a14171237/">
+                          <a href="https://www.linkedin.com/in/anand-shankar-a14171237/" target="_blank">
                               <i class="fab fa-linkedin"></i>
                           </a>
                           <a href="mailto:anandshankar.m2021@vitstudent.ac.in">
@@ -488,7 +432,7 @@
                       <p>Technical Head</p>
                       <div class="icons">
 
-                          <a href="https://www.linkedin.com/in/saheli-sahoo-8772b2220/">
+                          <a href="https://www.linkedin.com/in/saheli-sahoo-8772b2220/" target="_blank">
                               <i class="fab fa-linkedin"></i>
                           </a>
                           <a href="mailto:saheli.sahoo2021@vitstudent.ac.in">
@@ -508,7 +452,7 @@
                       <p>Finance Head</p>
                       <div class="icons">
 
-                          <a href="https://instagram.com/yashwanta_1708">
+                          <a href="https://instagram.com/yashwanta_1708" target="_blank">
                               <i class="fab fa-instagram"></i>
                           </a>
                           <a href="mailto:yashwanta.purohit2021@vitstudent.ac.in">
@@ -528,7 +472,7 @@
                       <p>HR Head</p>
                       <div class="icons">
 
-                          <a href="https://instagram.com/_nixonpaul_">
+                          <a href="https://instagram.com/_nixonpaul_" target="_blank">
                               <i class="fab fa-instagram"></i>
                           </a>
                           <a href="mailto:nixon.paul2021@vitstudent.ac.in">
@@ -621,7 +565,7 @@ Tamil Nadu-632014
               Information
             </h5>
             <p>
-              Any Announcements
+              Registrations open now on VTOP.
             </p>
           </div>
         </div>
@@ -634,16 +578,16 @@ Tamil Nadu-632014
         <div class="col-md-3">
           <div class="info_form ">
             <div class="social_box">
-              <a href="https://facebook.com/varc.vit">
+              <a href="https://facebook.com/varc.vit" target="_blank">
                 <img src="images/fb.png" alt="">
               </a>
-              <a href="https://twitter.com/varc_vit">
+              <a href="https://twitter.com/varc_vit" target="_blank">
                 <img src="images/twitter.png" alt="">
               </a>
-              <a href="https://in.linkedin.com/company/varc-vit">
+              <a href="https://in.linkedin.com/company/varc-vit" target="_blank">
                 <img src="images/linkedin.png" alt="">
               </a>
-              <a href="https://www.instagram.com/varc_vit">
+              <a href="https://www.instagram.com/varc_vit" target="_blank">
                 <img src="images/ins.png" alt="">
               </a>
             </div>
