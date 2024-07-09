@@ -156,6 +156,12 @@
           no-repeat 50% 50% / cover;
     }
 
+    .swiper-slide--six{
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("images/Events/WW_2.jpg")
+          no-repeat 50% 50% / cover;
+    }
+
     .swiper-3d .swiper-slide-shadow-left,
     .swiper-3d .swiper-slide-shadow-right {
       background-image: none;
@@ -281,6 +287,20 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
               </svg>
               2023
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide swiper-slide--six">
+          <span>Workshop</span>
+          <div>
+            <h2>Wireless Wonderer <b>(Yantra)</b></h2>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              March 2024
             </p>
           </div>
         </div>
@@ -463,6 +483,10 @@ Tamil Nadu-632014
         eventTitle.innerHTML = 'Extracurricular Course (Hardware of Broadcasting)';
         eventDescription.innerHTML = "VIT mandates the inclusion of extracurricular courses in the academic curriculum to ensure holistic skill development in students. As a part of the same, VARC offers a course titled “Hardware of Broadcasting”. The course offers a detailed overview on the evolution of broadcasting technologies through the years, from the early discovery of radio waves to present day. It covers the basics of amateur radio including its history and usage, along with the developments in radio technology. The course imparts knowledge on the modes of communication used over the decades. Few of the activities conducted include 'Waveform Chronicles' i.e. lecture series about different techniques of communication employed over time, homebrewing sessions (Antennas, Telegraph Keys, etc.) and ‘Archive Hour’, a series of curated selection of videos, all sourced from the 20th century, providing unique insights into the evolution of groundbreaking technologies";
         break;
+      case 5:
+        eventTitle.innerHTML = 'Wireless Wonderer';
+        eventDescription.innerHTML = "Wireless Wonders is an engaging, hands-on workshop where students learn to create their own home-brewed Yagi antenna, a directional antenna commonly used to enhance wireless network signals. Through this workshop, participants gain valuable insights into antenna technology and develop a deeper understanding of wireless communication principles. The workshop covers the fundamentals of electromagnetic waves, the theory and design of Yagi antennas, and practical skills in constructing and applying these antennas to improve network performance. By the end of the workshop, students will have a comprehensive grasp of both the technical and practical aspects of wireless communication.";
+
       // Add more cases as needed for additional slides
     }
   }
